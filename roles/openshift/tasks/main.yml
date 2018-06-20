@@ -5,3 +5,6 @@
 - import_tasts: install.yml
 
 - import_tasts: config.yml
+
+- name: start OpenShift
+  command: oc cluster up --public-hostname="176.32.33.149"

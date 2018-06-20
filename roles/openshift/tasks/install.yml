@@ -1,0 +1,16 @@
+---
+#Install
+- name: install vim
+  yum:
+     name: vim
+     state: latest
+	 
+- name: install docker
+  yum:
+     name: docker
+     state: latest
+- name: download oc
+  unarchive:
+    src: https://github.com/openshift/origin/releases/download/v3.9.0/openshift-origin-client-tools-v3.9.0-191fece-linux-64bit.tar.gz
+    dest: /usr/local/bin
+    remote_src: yes
