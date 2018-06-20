@@ -1,0 +1,7 @@
+---
+#Setup OpenShift Original in docker container
+- import_tasts: firewalld.yml
+
+- import_tasts: install.yml
+
+- import_tasts: config.yml

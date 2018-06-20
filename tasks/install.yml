@@ -1,0 +1,11 @@
+---
+#Install
+- name: install vim
+  yum:
+     name: vim
+     state: latest
+	 
+- name: install docker
+  yum:
+     name: docker
+     state: latest

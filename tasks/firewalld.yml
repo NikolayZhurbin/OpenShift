@@ -1,0 +1,22 @@
+---
+- name: enable ip forwarding
+  sysctl:
+     name: net.ipv4.ip_forward
+     value: 1
+     sysctl_set: yes
+     reload: yes
+	 
+- name: stop firewalld
+  systemd:
+     name: firewalld
+     state: stopped
+	 
+- name: disable firewalld
+  systemd:
+     name: firewalld
+     enabled: no
+     daemon_reload: yes
+	 
+- name: flush iptables
+  iptables:
+     flush:
