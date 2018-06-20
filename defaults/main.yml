@@ -1,0 +1,7 @@
+---
+#OpenShift insecure registries
+docker_config_insecure_registries: "172.30.0.0/16"
+
+docker_config_common:
+  "insecure-registries": "{{ docker_config_insecure_registries }}"
+docker_config_custom: {}
