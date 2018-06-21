@@ -23,3 +23,4 @@
   copy:
      src: /tmp/openshift-origin-client-tools-v3.9.0-191fece-linux-64bit/oc
      dest: /usr/local/bin
+     mode: 0777
