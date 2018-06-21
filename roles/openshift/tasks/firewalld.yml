@@ -19,4 +19,4 @@
 
 - name: flush iptables
   iptables:
-     flush:
+     flush: true
