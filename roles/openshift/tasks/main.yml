@@ -1,10 +1,10 @@
 ---
 #Setup OpenShift Original in docker container
-- import_tasts: firewalld.yml
+- import_tasks: firewalld.yml
 
-- import_tasts: install.yml
+- import_tasks: install.yml
 
-- import_tasts: config.yml
+- import_tasks: config.yml
 
 - name: start OpenShift
   command: oc cluster up --public-hostname="176.32.33.149"
