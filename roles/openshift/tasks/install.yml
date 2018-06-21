@@ -11,6 +11,7 @@
      state: latest
 - name: start docker and make it autoboot
   systemd:
+     name: docker
      enabled: yes
      state: started
 - name: download oc
