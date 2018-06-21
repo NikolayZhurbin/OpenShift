@@ -1,4 +1,5 @@
 ---
-- hosts: all
+- name: Start OpenShift in docker container
+  hosts: all
   roles:
-     openshift
+  - openshift
