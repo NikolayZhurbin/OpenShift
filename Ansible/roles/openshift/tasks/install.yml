@@ -9,16 +9,19 @@
   yum:
      name: docker
      state: latest
+	 
 - name: start docker and make it autoboot
   systemd:
      name: docker
      enabled: yes
      state: started
+	 
 - name: download oc
   unarchive:
     src: https://github.com/openshift/origin/releases/download/v3.9.0/openshift-origin-client-tools-v3.9.0-191fece-linux-64bit.tar.gz
     dest: /tmp
     remote_src: yes
+	
 - name: copy oc to /usr/local/bin
   copy:
      src: /tmp/openshift-origin-client-tools-v3.9.0-191fece-linux-64bit/oc
